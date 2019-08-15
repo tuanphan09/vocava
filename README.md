@@ -1,29 +1,11 @@
 # vocava
 
-Mọi người trước khi push thì tạo branch mới mang tên phần mình làm rồi push lên
-
-### App
-push app lên thư mục app, nhớ ignore các file build ko cần thiết.
 
 ### Service
 Gồm 3 phần:
 * speech to text
 * ocr
 * task generator
-
-Công việc còn lại của phần task generator: 
-* Thiết kế database ở file ```server/database/mongo_models.py```
-* User.topics là danh sách các topic mà người dùng hay đọc, mình nên làm kiểu người dùng có thể tự add topic vào và mình tự phân tích từ các tài liệu người dùng hay đọc.
-* thêm topic cho từng từ, các từ có khả năng nằm trong topic nào, cái này tìm cách sửa từ init_database, nghĩa là làm sẵn trước cho toàn bộ các từ trước đi, rồi đoạn
-```
-word = Dictionary(index=str(row['lemma']), level=cur_level, sfi=sfi, wordlist=str(row['wordlist']))
-``` 
-trong ```init_database.py``` thì thêm tham số ```topics=get_topics(str['lemma'])``` vào. cần viết thêm hàm get_topics, hiện tại chưa có. Viết hàm này thì để vào thư mục service vì coi vụ xử lý topic như service task_generator 
-
-* Trong bộ phân tích hiện tại, mới chỉ lấy ra các từ unknown_word theo kiểu lấy ( priority + num_search (xem WordWrapper ```mongo_models```) ) từ cao xuống thấp. hiện tại 2 giá trị này đều bằng 0. Sau này khi làm xong cái vụ tính toán số lần ấn vào màn hình của mỗi từ thì cập nhật trường num_search còn priority là dựa vào topic, có thể dùng theo kiểu priority là số topic của từ trùng với số topic của người dùng hoặc là độ tương tự của topic người dùng so vs topic của từ, có thể dùng hàm path_similarity() của wordnet.
-
-* Chưa có cập nhật kết quả exam. nghĩa là khi tạo 1 exam trong hàm ```generate_exam()``` thì tạo 1 exam id cho nó, rồi lưu vào Exam document đã viết sẵn trong mongo_models.
-* Khi người dùng làm xong bài kiểm tra thì trả lại user ( android ) gửi 1 lệnh POST kết quả lên cho server ( viết 1 api kiểu get_result để nhận kết quả và tăng độ ma_score ( khả năng hiểu của người dùng đối với 1 từ ) ) chuyển các từ đã đại ma_score tối đa sang known_word, thêm các từ mới mà mình phân tích được bù vào mục unknow_word ( các từ tiếp theo có cùng level hoặc các từ có topics theo mình là nên học, sửa các chỉ số như priority và num_search để từ đó có thể xuất hiện trong exam tiếp theo )
 
 
 ### Requirements
