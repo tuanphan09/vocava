@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize">
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:padding="15dp"
+        android:src="@drawable/ic_close"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="match_parent" />
+
+    <com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="37dp"
+        android:max="100"
+        android:layout_toEndOf="@+id/btn_close"
+        app:backgroundColor="#E2DBDB"
+        app:progressColor="@color/green" />
+
+</RelativeLayout>

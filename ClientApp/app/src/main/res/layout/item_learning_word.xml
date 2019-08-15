@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="@dimen/_90sdp"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.cardview.widget.CardView app:cardCornerRadius="10dp"
+        android:layout_alignParentTop="true"
+        app:cardElevation="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="@dimen/_70sdp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <RelativeLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:padding="7dp"
+            android:layout_height="match_parent">
+            <com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar
+                android:max="100"
+                android:id="@+id/progress_bar"
+                android:layout_alignParentBottom="true"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                app:backgroundColor="#E2DBDB"
+                app:progressColor="@color/green"
+                android:layout_height="@dimen/_10sdp" />
+            <TextView
+                android:id="@+id/tv_word"
+                android:text="dfadfsdfasf"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:layout_above="@+id/progress_bar"
+                android:layout_centerVertical="true"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fbutton_default_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ExamFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize">
+        <TextView
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:textAllCaps="true"
+            android:text="@string/exam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <com.timqi.sectorprogressview.ColorfulRingProgressView
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/progress_level"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_180sdp"
+        app:bgColor="#e1e1e1"
+        app:fgColorEnd="#ff4800"
+        app:fgColorStart="#ffe400"
+        app:percent="0"
+        app:startAngle="0"
+        app:strokeWidth="21dp"/>
+
+    <TextView
+        android:id="@+id/tv_level"
+        android:gravity="center"
+        android:layout_alignRight="@id/progress_level"
+        android:layout_alignLeft="@id/progress_level"
+        android:layout_alignBottom="@id/progress_level"
+        android:layout_alignTop="@id/progress_level"
+        android:textSize="30sp"
+        android:text="@string/level_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <info.hoang8f.widget.FButton
+        app:fButtonColor="@color/fbutton_default_shadow_color"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_below="@id/progress_level"
+        android:id="@+id/btn_learn_voca"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        app:cornerRadius="30dp"
+        android:text="@string/fight"
+        android:textSize="20sp"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_50sdp" />
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:elevation="100dp"
+        android:background="#ffffff"
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_progress"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp" />
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@id/img_progress"
+            android:textColor="#383737"
+            android:text="@string/init_database"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".fragments.StartTestVocFragment">
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/btn_start_test"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:text="@string/bat_dau"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

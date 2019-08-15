@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fbutton_color_green_sea"
+    tools:context=".fragments.StatisticFragment">
+
+<RelativeLayout
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize">
+    <TextView
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:textAllCaps="true"
+        android:text="@string/statistic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_gravity="center"
+                android:id="@+id/pie_chart"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_400sdp"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp" />
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

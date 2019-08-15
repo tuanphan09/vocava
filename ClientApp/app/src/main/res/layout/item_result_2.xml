@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:layout_height="@dimen/_70sdp">
+
+    <TextView
+        android:id="@+id/tv_word"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/progress_bar"
+        android:layout_centerVertical="true"
+        android:text="jkndfkjsdfnk"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/progress_bar"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:text="-30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar
+        android:max="100"
+        android:id="@+id/progress_bar"
+        app:backgroundColor="#E2DBDB"
+        app:progressColor="@color/green"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp" />
+</RelativeLayout>

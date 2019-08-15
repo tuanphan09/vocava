@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">VocaVa</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kiem_tra_von_tu">Kiểm tra vốn từ</string>
+    <string name="chup_anh">Chụp ảnh</string>
+    <string name="tai_anh">Tải ảnh</string>
+    <string name="tai_file">Tải file pdf, docx,...</string>
+    <string name="tai_file_audio">Tải file audio</string>
+    <string name="ghi_am">Ghi âm cuộc hội thoại</string>
+    <string name="hoc_tu_vung">Học từ vựng</string>
+    <string name="bat_dau">Bắt đầu</string>
+    <string name="kiem_tra">Kiểm tra</string>
+    <string name="dung_roi">Good job!</string>
+    <string name="sai_roi">Wrong answer!</string>
+    <string name="hoan_thanh_tu_duoi_day">Hoàn thành từ dưới đây</string>
+    <string name="tiep_theo">Next</string>
+    <string name="ban_co_muon_thoat">Do you want exit?</string>
+    <string name="dong_y">OK</string>
+    <string name="khong">Cancel</string>
+    <string name="Ket_qua">Result</string>
+    <string name="tim_tu_phat_am">Tìm từ phát âm tương ứng</string>
+    <string name="level_1">Level 1</string>
+    <string name="photo_to_text">Image To Text</string>
+    <string name="tools">Tools</string>
+    <string name="exit">Exit</string>
+    <string name="fight">Start</string>
+    <string name="audio_to_text">Audio To Text</string>
+    <string name="init_database">Loading...</string>
+    <string name="check">Check</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="advanced">Advanced</string>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="extension">Extension</string>
+    <string name="learning_word">Learning word</string>
+    <string name="exam">Exam</string>
+    <string name="statistic">Statistic</string>
+    <string name="realtime_conversation">Realtime Conversation</string>
+    <string name="dictionary">Dictionaty</string>
+</resources>

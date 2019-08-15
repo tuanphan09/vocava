@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="wrap_content"
+    android:padding="7dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
+    <info.hoang8f.widget.FButton android:layout_height="@dimen/_50sdp"
+        android:id="@+id/option"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:fButtonColor="@color/unselectedColor"
+        android:padding="@dimen/_10sdp"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" />
+</LinearLayout>

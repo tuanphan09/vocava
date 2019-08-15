@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.FillBlankTestFragment">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:background="@color/fbutton_default_shadow_color"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize">
+        <ImageView
+            android:tint="@color/white"
+            android:id="@+id/btn_back"
+            android:background="?android:selectableItemBackground"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@id/action_bar"
+        android:textColor="@color/white"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/fbutton_default_color"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_title"
+        android:text="@string/hoan_thanh_tu_duoi_day"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:padding="@dimen/_10sdp"
+        android:layout_below="@id/tv_title"
+        android:background="@color/fbutton_color_silver"
+        android:layout_margin="@dimen/_30sdp"
+        android:id="@+id/layout_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/btn_audio"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rcv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:background="?android:selectableItemBackground"
+            android:scaleType="fitXY"
+            android:id="@+id/btn_audio"
+            android:layout_alignParentStart="true"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_volume" />
+        <TextView
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/rcv_question"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_pronounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/tv_pronounce"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_mean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:textSize="50sp"
+            android:id="@+id/tv_result"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/btn_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:text="@string/kiem_tra"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
