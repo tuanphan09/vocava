@@ -1,16 +1,24 @@
 # vocava
 
+### Overview
+This product was made in AI4VN Hackathon 2019.
 
 ### Service
-Gồm 3 phần:
-* speech to text
+Main components:
 * ocr
 * task generator
+* speech to text
 
 
 ### Requirements
 
-Install mongodb, for unix user:
+
+Install tesseract:
+```
+brew install tesseract
+```
+
+Install mongodb:
 ```
 brew install mongodb
 ```
