@@ -5,6 +5,9 @@ Building a virtual assistant to help you learning vocabulary effectively based o
 
 This product was achieved top 5 in AI4VN Hackathon 2019.
 
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/jaAswzgGPnQ/0.jpg)](http://www.youtube.com/watch?v=jaAswzgGPnQ)
+
 ### Service
 Main components:
 * ocr
