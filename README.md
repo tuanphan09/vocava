@@ -1,7 +1,9 @@
-# vocava
+# VocaVA - Vocabulary Virtual Assistant
 
 ### Overview
-This product was made in AI4VN Hackathon 2019.
+Building a virtual assistant to help you learning vocabulary effectively based on your daily usage of English.
+
+This product was achieved top 5 in AI4VN Hackathon 2019.
 
 ### Service
 Main components:
@@ -10,7 +12,7 @@ Main components:
 * speech to text
 
 
-### Requirements
+### Installation
 
 
 Install tesseract:
@@ -32,12 +34,9 @@ Install python package:
 ```
 pip3 install -r requirements.txt
 ```
-or
-```
-python3 -m pip install -r requirements.txt
-```
 
-### Instruction to run
+
+### Usage
 Init database
 ```
 python3 -m server.databases.init_databases
@@ -48,7 +47,7 @@ Run server:
 ```
 
 ### API Guide
-```IP_ADDRESS``` is your IP_ADDRESS in your lan. example : ```192.168.1.23``` check by ```ifconfig```, to connect from other device you need to  turn off firewall of server machine and connect to same network ( wifi or lan )
+```IP_ADDRESS``` is your IP_ADDRESS in your lan. example : ```192.168.1.23``` check by ```ifconfig```, to connect from other device you need to  turn off firewall of server machine and connect to same network (wifi or lan)
 Test server on local machine, you can use ```localhost``` or ```0.0.0.0``` instead.
 #### Home 
 ```
@@ -80,7 +79,6 @@ Get user info by user-id, for example user-id = 1
 ```
 /api/create-new-exam?user-id=1
 ```
-đưa tham số là user-id, hệ thống sẽ phân tích và tạo ra bài kiểm tra là danh sách các task như ở dưới
 
 #### Get specific task for specific word
 6 task: definition, definition-task, pronunciation-task, sentence-task, puzzle-task, practice-task
@@ -103,7 +101,7 @@ example result (JSON):
   "word": "quiz"
 }
 ```
-Kết quả trả về bao gồm dạng task, từ , định nghĩa ngắn, từ đồng nghĩa, từ trái nghĩa -> cho người dùng nhìn từ, và định nghĩa của nó, bên cạnh đó cho người dùng xem qua các từ đồng nghĩa có level thấp hơn ( để người dùng có thể hình dung nghĩa của từ )
+
 
 ##### Definition task
 ```
@@ -125,8 +123,6 @@ example result (JSON):
   "word": "quiz"
 }
 ```
-Kết quả trả về bao gồm dạng task, từ , định nghĩa của từ, 4 từ là các câu trả lời trắc nghiệm, và vị trí của đáp án
-
 
 
 ##### Pronunciation task
@@ -150,7 +146,6 @@ example result (JSON):
   "word": "quiz"
 }
 ```
-Kết quả trả về bao gồm dạng task, từ , link tới file audio của từ, 4 từ là các câu trả lời trắc nghiệm, và vị trí của đáp án, sau khi người dùng nhập đáp án thì hiện explainAnswer là phát cách đọc của từ theo bang IPA
 
 ##### Sentence task
 ```
@@ -172,9 +167,6 @@ example result (JSON):
   "word": "quiz"
 }
 ```
-Kết quả trả về bao gồm dạng task, từ , 1 câu về từ cần hỏi, đã thay thế = '\_\_\_', 4 câu trả lời trắc nghiệm, và vị trí của đáp án,
-cẩn thận với loại task này vì vẫn còn lỗi chưa khắc phục đc. 1 là do các dạng khác của từ trong câu, vd khi học về từ query nhưng trong câu chỉ có queies thì question ko biến đc từ queies thành ___ . tiếp theo là như cái câu mẫu, câu a sports ____ quá chung chung, ko thể hiện đc tính chất của từ quiz
-
 
 ##### Puzzle task
 ```
@@ -196,15 +188,13 @@ example result (JSON):
   "word": "quiz"
 }
 ```
-Kết quả trả về bao gồm dạng task, từ , link tới file audio của từ, options là các chữ cái đã bị xáo trộn, answer là từ, khi làm cần kiểm tra xem người dùng viết thứ tự của từ có đúng ko?
 
 
 ##### Practice task
 ```
 /api/create-practice-task?word=quiz
 ```
-
-random 1 trong 4 cái bài kiểm tra kia để kiểm tra lại
+...
 
 
 
